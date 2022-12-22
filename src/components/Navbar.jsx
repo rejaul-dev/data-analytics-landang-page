@@ -19,7 +19,7 @@ export const Navbar = () => {
         <li className="p-4">Contact</li>
       </ul>
       <div onClick={handleNav} className="block md:hidden">
-        {!navToggle ? (
+        {navToggle ? (
           <AiOutlineClose size={25} />
         ) : (
           <AiOutlineMenu size={25} />
@@ -27,13 +27,12 @@ export const Navbar = () => {
       </div>
       <div
         className={
-          !navToggle
-            ? "fixed left-0 top-0 h-full w-[60%] border-r border-r-gray-900 bg-[#000300] ease-in-out duration-600"
+          navToggle
+            ? "fixed left-0 top-0 h-full w-[60%] border-r border-r-gray-900 bg-[#000300] ease-in-out duration-1000"
             : "fixed left-[-100%]"
         }
       >
-        <h1 className="w-full text-3xl font-bold text-[#00df9a]">DATA.</h1>
-
+        <h1 className="p-4 w-full text-3xl font-bold text-[#00df9a]">DATA.</h1>
         <ul className="p-4 uppercase">
           <li className="p-4 border-b border-b-gray-600">Home</li>
           <li className="p-4 border-b border-b-gray-600">Company</li>
